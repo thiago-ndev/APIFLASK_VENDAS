@@ -4,7 +4,7 @@ import gunicorn
 import blacklist
 from resources.produto_resource import ProdutosResource, ProdutoResource
 from resources.categoria_resource import CategoriasResource,CategoriaResource
-from resources.pessoa_resource import  PessoasResource,PessoaResource,PessoaPerfisResource
+from resources.pessoa_resource import PessoasResource,PessoaResource,PessoaPerfisResource
 from resources.login_resource import LoginResource, LogoutResource
 from sql_alchemy import banco
 from flask_migrate import Migrate
@@ -13,10 +13,9 @@ from models.categoria_model import CategoriaModel
 from models.estoque_model import EstoqueModel
 from models.pessoa_model import *
 from models.perfil_model import *
-from flask_jwt_extended import JWTManager,get_jwt_header,jwt_required
+from flask_jwt_extended import JWTManager, get_jwt_header, jwt_required
 from blacklist import BLACKLIST
 from flask import jsonify
-
 from config_json import *
 
 
@@ -71,8 +70,6 @@ api.add_resource(CategoriaResource, '/categorias/<int:codigo>')
 @app.before_first_request
 def cria_banco():
     banco.create_all()
-web: gunicorn
-app:app
 
 if __name__ == '__main__':
     app.run(debug=True)

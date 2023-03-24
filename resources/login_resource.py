@@ -46,7 +46,7 @@ class LoginResource(Resource):
 
 class LogoutResource(Resource):
 
-    @jwt_required()
+    @jwt_required
     def post(self):
         try:
             jwt_id = get_jwt()['jti']
