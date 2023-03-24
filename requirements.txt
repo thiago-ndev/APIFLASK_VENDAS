@@ -9,7 +9,6 @@ importlib-resources==5.4.0
 itsdangerous==2.0.1
 Mako==1.1.6
 MarkupSafe==2.0.1
-psycopg2==2.9.5
 PyJWT==2.4.0
 pytz==2022.7.1
 six==1.16.0
