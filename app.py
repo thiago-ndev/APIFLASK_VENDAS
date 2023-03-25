@@ -36,7 +36,7 @@ app.debug = True
 
 # Inicializar o banco de dados
 banco.init_app(app)
-@app.route('/')
+@app.route('/', methods=["GET"])
 def index():
     return '<h1> Deploy realizado com sucesso.'
 
