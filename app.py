@@ -71,5 +71,5 @@ api.add_resource(CategoriaResource, '/categorias/<int:codigo>')
 def cria_banco():
     banco.create_all()
 
-#if __name__ == '__main__':
-#    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

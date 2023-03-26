@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f0aa4c7-73a1-4a38-8c30-589dc680eb3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/credenciais.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-getting-started" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/login_resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/login_resource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/produto_resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/produto_resource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credenciais.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/Thiag/OneDrive/Documentos/Python Coti/python webdeveloper full stack/aula23",
     "settings.editor.selected.configurable": "configurable.group.project"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON5",
+      "JSON"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Python.login_resource">
