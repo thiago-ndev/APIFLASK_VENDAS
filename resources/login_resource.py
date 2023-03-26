@@ -2,25 +2,22 @@ from flask_restful import Resource, reqparse
 from util import *
 from models.pessoa_model import *
 from hmac import compare_digest
-from flask_jwt_extended import create_access_token, get_jwt
-from flask_jwt_extended import jwt_required
+from flask_jwt_extended import create_access_token, get_jwt, jwt_required
 from blacklist import *
 from flask import make_response, jsonify
-
-
 
 class LoginResource(Resource):
 
     def get_arguments(self):
 
         argumentos = reqparse.RequestParser(bundle_errors=True)
-        argumentos.add_argument('email', required=True, help='informe o email',
+        argumentos.add_argument('email', required=True, help='informe o email.',
                                 type=str)
-        argumentos.add_argument('senha', required=True, help='informe a senha,',
+        argumentos.add_argument('senha', required=True, help='informe a senha.',
                                 type=str)
 
         args = argumentos.parse_args()
-        return  args
+        return args
 
 
     def post(self):
@@ -32,27 +29,27 @@ class LoginResource(Resource):
 
             if compare_digest(pessoa.senha, crypt_password(dados['senha'])):
                 token = create_access_token(pessoa.codigo)
-                token = 'Bearer ' + str(token)
-                resp = make_response(jsonify({'pessoa': pessoa.json()}), 200)
-                resp.headers['acces_token'] = token
+                token = "Bearer "+ str(token)
+                resp = make_response(jsonify({'pessoa' : pessoa.json()}), 200)
+                resp.headers['access_token'] = token
                 return resp
 
             raise Exception('UsuarioInvalidoError, usuario ou senha invalidos.')
 
         except Exception as ex:
             error = raise_error(ex.args,'Error ao efetuar Login', 410)
-            return {'error':error}, 500
+            return {'error': error}, 500
 
 
 class LogoutResource(Resource):
 
-    @jwt_required
+    @jwt_required()
     def post(self):
         try:
             jwt_id = get_jwt()['jti']
             print(jwt_id)
             BLACKLIST.add(jwt_id)
-            return {'mensage':'deslogado'}
+            return {'mensage': 'deslogado'}
 
         except Exception as ex:
             error = raise_error(ex.args, 'Erro ao efetuar Logout', 410)

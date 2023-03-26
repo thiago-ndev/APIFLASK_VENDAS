@@ -36,7 +36,7 @@ app.debug = True
 
 # Inicializar o banco de dados
 banco.init_app(app)
-@app.route('/', methods=["GET"])
+@app.route('/')
 def index():
     return '<h1> Deploy realizado com sucesso.'
 
@@ -71,5 +71,5 @@ api.add_resource(CategoriaResource, '/categorias/<int:codigo>')
 def cria_banco():
     banco.create_all()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)

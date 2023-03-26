@@ -4,7 +4,6 @@ from models.produto_model import ProdutoModel
 from models.categoria_model import CategoriaModel
 from flask_jwt_extended import jwt_required
 
-
 def get_argumentos(chek=True):
     argumentos = reqparse.RequestParser(bundle_errors=True)
 
@@ -42,7 +41,7 @@ class ProdutosResource(Resource):
 
 
 
-    @jwt_required
+    @jwt_required()
     def post(self):
         dados = get_argumentos()
         try:
@@ -75,7 +74,7 @@ class ProdutoResource(Resource):
             error = raise_error(ex.args,"Error ao buscar produto", 410), 500
             return {'error', error}, 500
 
-    @jwt_required
+    @jwt_required()
     def delete(self,codigo):
         try:
             produto = ProdutoModel().find(codigo)
@@ -91,7 +90,7 @@ class ProdutoResource(Resource):
             error = raise_error(ex.args, "Error ao deletar produto", 410), 500
             return {'error': error}, 500
 
-    @jwt_required
+    @jwt_required()
     def put(self, codigo):
         dados = get_argumentos(chek=False)
         try:
