@@ -1,3 +1,3 @@
 {
-  "DATABASE_URL" : "mysql+pymysql://b9bc569a3e06eb:5f601623@us-cdbr-east-06.cleardb.net/heroku_e90ccb38ab628f6"
+  "DATABASE_URL" : "mysql://b407f5ded2cda8:90b1f224@us-cdbr-east-06.cleardb.net/heroku_785aaa01e7b1227"
 }
