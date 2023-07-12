@@ -107,3 +107,5 @@ class ProdutoResource(Resource):
         except Exception as ex:
             error = raise_error(ex.args, "Error ao Atualizar o produto.", 410), 500
             return {'error':error}, 500
+
+        #vai funcionar
