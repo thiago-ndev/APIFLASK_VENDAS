@@ -23,7 +23,7 @@ def get_argumentos(chek=True):
     pass
 
 
-# Métodos do API -> POST, GET, DELETE, UPDATE, PATCH
+# Métodos do API -> POST, GET, DELETE, UPDATE
 # -> Sem parâmetros -> GET -> todos os produtos, POST -> Cadastrar
 class ProdutosResource(Resource):
 
@@ -38,7 +38,6 @@ class ProdutosResource(Resource):
             msg = ex.args
             error = raise_error(msg, 'Erro ao listar produtos', 410)
             return {'error' :  error }, 500
-
 
 
     @jwt_required()
@@ -61,6 +60,8 @@ class ProdutosResource(Resource):
 
 
 # GET, DELETE, PUT
+# Com parâmetros
+
 class ProdutoResource(Resource):
     def get(self, codigo):
         try:

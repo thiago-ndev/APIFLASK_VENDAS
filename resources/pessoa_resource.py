@@ -165,6 +165,7 @@ class PessoaPerfisResource(Resource):
 
     def get(self):
         pass
+        # buscar o perfil da pessoa
 
     def put(self):
         pass
