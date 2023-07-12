@@ -32,3 +32,4 @@ typing_extensions==4.1.1
 urllib3==1.26.12
 Werkzeug==2.0.3
 zipp==3.6.0
+mysqlclient==2.0.3
