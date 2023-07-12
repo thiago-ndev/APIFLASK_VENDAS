@@ -56,7 +56,7 @@ class ProdutosResource(Resource):
             msg = ex.args
             error = raise_error(msg, 'Erro ao cadastrar produto', 409)
             return {'error' : error}, 500
-        pass
+
 
 
 # GET, DELETE, PUT
