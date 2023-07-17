@@ -1,8 +1,8 @@
 from flask_restful import Resource, reqparse
-from util import raise_error
-from models.produto_model import ProdutoModel
 from models.categoria_model import CategoriaModel
+from models.produto_model import ProdutoModel
 from flask_jwt_extended import jwt_required
+from util import raise_error
 
 def get_argumentos(chek=True):
     argumentos = reqparse.RequestParser(bundle_errors=True)

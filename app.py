@@ -6,7 +6,7 @@ from resources.produto_resource import ProdutosResource, ProdutoResource
 from resources.categoria_resource import CategoriasResource,CategoriaResource
 from resources.pessoa_resource import PessoasResource,PessoaResource,PessoaPerfisResource
 from resources.login_resource import LoginResource, LogoutResource
-from resources.perfil_resource import PerfisResource
+from resources.perfil_resource import PerfisResource, PerfilResource
 from sql_alchemy import banco
 from flask_migrate import Migrate
 from models.produto_model import ProdutoModel
@@ -60,6 +60,7 @@ api.add_resource(PessoaResource, '/pessoas/<int:codigo>')
 api.add_resource(PessoaPerfisResource, '/pessoas/<int:codigo>/perfis')
 
 api.add_resource(PerfisResource, '/perfis')
+api.add_resource(PerfilResource, '/perfis/<int:codigo>')
 
 api.add_resource(LoginResource, '/login')
 api.add_resource(LogoutResource, '/logout')

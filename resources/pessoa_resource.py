@@ -1,6 +1,6 @@
+from flask_restful import Resource, reqparse
 from models.pessoa_model import *
 from util import *
-from flask_restful import Resource, reqparse
 
 def get_arguments():
     argumentos = reqparse.RequestParser(bundle_errors=True)
@@ -162,14 +162,4 @@ class PessoaPerfisResource(Resource):
         except Exception as ex:
             error = raise_error(ex.args, 'error ao criar perfil', 410)
             return {'error': error}, 500
-
-    def get(self):
-        pass
-        # buscar o perfil da pessoa
-
-    def put(self):
-        pass
-
-    def delete(self):
-        pass
 
