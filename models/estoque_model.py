@@ -13,7 +13,7 @@ class EstoqueModel(banco.Model):
     def __init__(self, codigo = None, quantidade = None):
         self.codigo = codigo
         self.quantidade = quantidade
-    pass
+    
 
     def __str__(self):
         return '{}, {}'.format(self.codigo, self.quantidade)
@@ -31,18 +31,18 @@ class EstoqueModel(banco.Model):
     def save(self):
         banco.session.add(self)
         banco.session.commit()
-        pass
+        
 
     def update(self, obj):
         self.quantidade = obj.quantidade
         self.codigo = obj.codigo
         self.save()
-        pass
+        
 
     def delete(self):
         banco.session.delete(self)
         banco.session.commit()
-        pass
+        
 
         # Método de classe
 
@@ -52,6 +52,6 @@ class EstoqueModel(banco.Model):
         if obj:
             return obj
         return None
-        pass
+        
 
-    pass
+    
