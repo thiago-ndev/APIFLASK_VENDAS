@@ -48,19 +48,19 @@ class ProdutoModel(banco.Model):
     def save(self):
         banco.session.add(self)
         banco.session.commit()
-        pass
+        
 
     def update(self, obj):
         self.nome = obj.nome
         self.preco = obj.preco
         self.codigo = obj.codigo
         self.save()
-        pass
+        
 
     def delete(self):
         banco.session.delete(self)
         banco.session.commit()
-        pass
+        
 
     # Método de classe
     @classmethod
@@ -69,6 +69,6 @@ class ProdutoModel(banco.Model):
         if obj:
             return obj
         return None
-        pass
+        
 
-    pass
+    
