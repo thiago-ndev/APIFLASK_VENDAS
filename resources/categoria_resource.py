@@ -2,7 +2,6 @@ from flask_restful import Resource, reqparse
 from models.categoria_model import CategoriaModel
 from util import raise_error
 
-# -> nome, sigla
 def get_argumentos():
     argumentos = reqparse.RequestParser(bundle_errors=True)
 
@@ -14,16 +13,15 @@ def get_argumentos():
 
     args = argumentos.parse_args()
     return args
-    pass
 
 
-# POST - GET
+
+
 class CategoriasResource(Resource):
 
-    # get -> todas as categorias
     def get(self):
         try:
-            # Todas as categorias -> objeto
+
             categorias = CategoriaModel().query.all()
             # SERIALIZAR -> JSON()
             categorias = [c.json() for c in categorias]
@@ -33,7 +31,7 @@ class CategoriasResource(Resource):
             msg = ex.args
             error = raise_error(msg, 'Erro ao listar categorias.', 410)
             return  {'error' :  error}, 500
-        pass
+
 
     def post(self):
         dados = get_argumentos()
@@ -50,7 +48,6 @@ class CategoriasResource(Resource):
             return {'error' : error}, 500
 
 
-# GET - DELETE - PUT
 class CategoriaResource(Resource):
     def get(self, codigo):
         try:

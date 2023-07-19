@@ -36,7 +36,7 @@ class PerfisResource(Resource):
             return {'error':error}, 500
 
 
-
+    @jwt_required()
     def post(self):
 
         dados = get_argumentos(self)
@@ -70,7 +70,7 @@ class PerfilResource(Resource):
             error = raise_error(msg, 'erro ao buscar perfil',410)
             return {'error': error}, 500
 
-
+    @jwt_required()
     def delete(self, codigo):
         try:
             perfil = PerfilModel.find(codigo)
@@ -84,7 +84,7 @@ class PerfilResource(Resource):
             error = raise_error(msg, 'erro ao deletar perfil', 410)
             return {'error': error}, 500
 
-
+    @jwt_required()
     def put(self, codigo):
         dados = get_argumentos(self)
         try:
@@ -93,7 +93,8 @@ class PerfilResource(Resource):
                 perfil.sigla = dados['sigla']
                 perfil.perfil = dados['perfil']
                 perfil.update(perfil)
-            return {'msg': 'Perfil atualizado com suceso.'}
+                return {'msg': 'Perfil atualizado com suceso.'}
+            return {'msg': 'Perfil não encontrado.'}
 
         except Exception as ex:
             msg = ex.args

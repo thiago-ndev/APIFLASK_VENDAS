@@ -1,4 +1,5 @@
 from flask_restful import Resource, reqparse
+from flask_jwt_extended import jwt_required
 from models.pessoa_model import *
 from util import *
 
@@ -86,7 +87,7 @@ class PessoaResource(Resource):
         except Exception as ex:
             error = raise_error(ex.args, 'Error ao buscar pessoa.', 410), 500
             return {'error': error}, 500
-
+    @jwt_required()
     def delete(self, codigo):
         try:
             pessoa = PessoaModel().find(codigo)
@@ -98,7 +99,7 @@ class PessoaResource(Resource):
         except Exception as ex:
             error = raise_error(ex.args,'Error ao deletar.', 410), 500
             return {'error': error}, 500
-
+    @jwt_required()
     def put(self, codigo):
             dados = get_arguments()
             try:
@@ -146,6 +147,7 @@ class PessoaPerfisResource(Resource):
         args = argumentos.parse_args()
         return args
 
+    @jwt_required()
     def post(self, codigo):
         dados = self.get_argumentos_perfis()
         try:
@@ -155,7 +157,6 @@ class PessoaPerfisResource(Resource):
             for p in perfis:
                 pessoa.perfis.append(p)
 
-            #pessoa.perfis = perfis
             pessoa.save()
             return {'pessoa':pessoa.json()}, 200
 

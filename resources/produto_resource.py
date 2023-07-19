@@ -20,14 +20,11 @@ def get_argumentos(chek=True):
 
     args = argumentos.parse_args()
     return args
-    pass
 
 
-# Métodos do API -> POST, GET, DELETE, UPDATE
 # -> Sem parâmetros -> GET -> todos os produtos, POST -> Cadastrar
 class ProdutosResource(Resource):
 
-    # Get -> todos os produtos
     def get(self):
         try:
             produtos = ProdutoModel().query.all()
@@ -56,7 +53,6 @@ class ProdutosResource(Resource):
             msg = ex.args
             error = raise_error(msg, 'Erro ao cadastrar produto', 409)
             return {'error' : error}, 500
-
 
 
 # GET, DELETE, PUT
@@ -107,5 +103,3 @@ class ProdutoResource(Resource):
         except Exception as ex:
             error = raise_error(ex.args, "Error ao Atualizar o produto.", 410), 500
             return {'error':error}, 500
-
-        #vai funcionar

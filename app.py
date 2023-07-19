@@ -39,7 +39,8 @@ app.debug = True
 banco.init_app(app)
 @app.route('/')
 def index():
-    return '<h1> Deploy realizado com sucesso.'
+    return '<h1> link da documentação: https://documenter.getpostman.com/view/25608627/2s946iaqNW' \
+           '<h1> repository: https://github.com/thiago-ndev/APIFLASK_VENDAS'
 
 @jwt.token_in_blocklist_loader
 def verificar_blacklist(jwt_header, jwt_payload: dict):
@@ -54,7 +55,7 @@ def token_invalido(jwt_header, jwt_payload: dict):
     print(blacklist.BLACKLIST)
     return jsonify({'mensage': 'token invalidado'})
 
-
+# Rotas
 api.add_resource(PessoasResource, '/pessoas')
 api.add_resource(PessoaResource, '/pessoas/<int:codigo>')
 api.add_resource(PessoaPerfisResource, '/pessoas/<int:codigo>/perfis')
