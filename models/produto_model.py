@@ -8,12 +8,12 @@ class ProdutoModel(banco.Model):
     nome = banco.Column(banco.String(80), nullable=False)
     preco = banco.Column(banco.Float(precision=1), nullable=False)
 
-
+    # Chave estrangeira
     categoria_codigo = banco.Column(banco.Integer(), banco.ForeignKey("categoria.codigo"),
                                     nullable=False)
 
 
-
+    # Relacionamento
     estoque = banco.relationship(EstoqueModel, back_populates='produto', uselist=False)
     categoria = banco.relationship(CategoriaModel, back_populates='produtos')
 
@@ -48,19 +48,19 @@ class ProdutoModel(banco.Model):
     def save(self):
         banco.session.add(self)
         banco.session.commit()
-
+        pass
 
     def update(self, obj):
         self.nome = obj.nome
         self.preco = obj.preco
         self.codigo = obj.codigo
         self.save()
-
+        pass
 
     def delete(self):
         banco.session.delete(self)
         banco.session.commit()
-
+        pass
 
     # Método de classe
     @classmethod
@@ -69,4 +69,6 @@ class ProdutoModel(banco.Model):
         if obj:
             return obj
         return None
+        pass
 
+    pass

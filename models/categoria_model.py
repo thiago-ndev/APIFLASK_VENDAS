@@ -11,7 +11,7 @@ class CategoriaModel(banco.Model):
         self.codigo =codigo
         self.nome = nome
         self.sigla = sigla
-
+        pass
 
     def __str__(self):
         return '{}, {}, {}'.format(self.codigo, self.sigla, self.nome)
@@ -38,19 +38,19 @@ class CategoriaModel(banco.Model):
     def save(self):
         banco.session.add(self)
         banco.session.commit()
-
+        pass
 
     def update(self, obj):
         self.nome = obj.nome
         self.sigla = obj.sigla
         self.codigo = obj.codigo
         self.save()
-
+        pass
 
     def delete(self):
         banco.session.delete(self)
         banco.session.commit()
-
+        pass
 
         # Método de classe
 
@@ -60,6 +60,6 @@ class CategoriaModel(banco.Model):
         if obj:
             return obj
         return None
+        pass
 
-
-
+    pass

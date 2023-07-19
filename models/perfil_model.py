@@ -18,6 +18,7 @@ class PerfilModel(banco.Model):
         self.codigo = codigo
         self.sigla = sigla
         self.perfil = perfil
+        pass
 
 
     def __str__(self):
@@ -36,19 +37,19 @@ class PerfilModel(banco.Model):
     def save(self):
         banco.session.add(self)
         banco.session.commit()
-
+        pass
 
     def update(self, obj):
         self.perfil = obj.perfil
         self.sigla = obj.sigla
         self.codigo = obj.codigo
         self.save()
-
+        pass
 
     def delete(self):
         banco.session.delete(self)
         banco.session.commit()
-
+        pass
 
         # Método de classe
 
@@ -58,6 +59,10 @@ class PerfilModel(banco.Model):
         if obj:
             return obj
         return None
+        pass
+
+
+    pass
 
 
 
