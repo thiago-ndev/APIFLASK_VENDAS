@@ -14,8 +14,8 @@ StartFragment
 
 Atualmente existem os seguintes recursos abaixo que você pode manipular através dos métodos GET, POST, PUT e DELETE:
 
-- Pessoas ()
-- Perfis ()
+- Pessoas(customers)
+- Perfis (customers)
 - Produtos (product)
 - Categorias (category)
     
@@ -27,6 +27,10 @@ StartFragment
 Todos os dados enviados e recebidos pela API estão/deverão ser em formato JSON (application/json).
 
 StartFragment
+
+## Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request com melhorias, correções de bugs ou novas funcionalidades.
+
 
 ## Autenticação
 
