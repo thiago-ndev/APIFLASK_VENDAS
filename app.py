@@ -3,6 +3,7 @@ from flask_restful import Resource, Api
 import gunicorn
 import blacklist
 from resources.produto_resource import ProdutosResource, ProdutoResource
+from resources.estoque_resource import EstoquesResource,EstoqueResource
 from resources.categoria_resource import CategoriasResource,CategoriaResource
 from resources.pessoa_resource import PessoasResource,PessoaResource,PessoaPerfisResource
 from resources.login_resource import LoginResource, LogoutResource
@@ -22,6 +23,7 @@ from config_json import *
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://b9bc569a3e06eb:5f601623@us-cdbr-''east-06.cleardb.net/heroku_e90ccb38ab628f6'
+app.config['JSON_AS_ASCII'] = False  # para o json retornar caracteres especiais
 app.config['SQLALCHEMY_DATABASE_URI']= DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
 app.config['JWT_SECRET_KEY']= 'APREST001'
@@ -39,8 +41,8 @@ app.debug = True
 banco.init_app(app)
 @app.route('/')
 def index():
-    return '<h1> link da documentação: https://documenter.getpostman.com/view/25608627/2s946iaqNW' \
-           '<h1> repository: https://github.com/thiago-ndev/APIFLASK_VENDAS'
+    return '<a href="https://documenter.getpostman.com/view/25608627/2s946iaqNW">Documentação</a> <br> <br>' \
+           '<a href="https://github.com/thiago-ndev/APIFLASK_VENDAS">Repository</a>'
 
 @jwt.token_in_blocklist_loader
 def verificar_blacklist(jwt_header, jwt_payload: dict):
@@ -68,6 +70,9 @@ api.add_resource(LogoutResource, '/logout')
 
 api.add_resource(ProdutosResource, '/produtos')
 api.add_resource(ProdutoResource, '/produtos/<int:codigo>')
+
+api.add_resource(EstoquesResource, '/estoque')
+api.add_resource(EstoqueResource, '/estoque/<int:codigo>')
 
 api.add_resource(CategoriasResource, '/categorias')
 api.add_resource(CategoriaResource, '/categorias/<int:codigo>')

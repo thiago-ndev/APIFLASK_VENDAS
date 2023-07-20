@@ -13,7 +13,7 @@ class ProdutoModel(banco.Model):
                                     nullable=False)
 
 
-    # Relacionamento
+
     estoque = banco.relationship(EstoqueModel, back_populates='produto', uselist=False)
     categoria = banco.relationship(CategoriaModel, back_populates='produtos')
 
@@ -44,23 +44,22 @@ class ProdutoModel(banco.Model):
             'preco': self.preco,
         }
 
-    # CRIAR OS METODOS DO CRUD
     def save(self):
         banco.session.add(self)
         banco.session.commit()
-        pass
+
 
     def update(self, obj):
         self.nome = obj.nome
         self.preco = obj.preco
         self.codigo = obj.codigo
         self.save()
-        pass
+
 
     def delete(self):
         banco.session.delete(self)
         banco.session.commit()
-        pass
+
 
     # Método de classe
     @classmethod
@@ -69,6 +68,6 @@ class ProdutoModel(banco.Model):
         if obj:
             return obj
         return None
-        pass
 
-    pass
+
+

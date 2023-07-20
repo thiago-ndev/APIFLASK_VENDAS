@@ -22,7 +22,7 @@ class PessoaModel(banco.Model):
         self.nome = nome
         self.senha = senha
         self.email = email
-        pass
+
 
     def __str__(self):
         return '{}, {}, {}, {}'.format(self.codigo, self.nome,
@@ -45,7 +45,7 @@ class PessoaModel(banco.Model):
     def save(self):
         banco.session.add(self)
         banco.session.commit()
-        pass
+
 
     def update(self, obj):
         self.nome = obj.nome
@@ -53,12 +53,12 @@ class PessoaModel(banco.Model):
         self.email = obj.email
         self.codigo = obj.codigo
         self.save()
-        pass
+
 
     def delete(self):
         banco.session.delete(self)
         banco.session.commit()
-        pass
+
 
         # Método de classe
 
@@ -87,7 +87,7 @@ class ClienteModel(PessoaModel):
         PessoaModel.__init__(self, codigo, nome, email, senha)
         self.dataNasc = dataNasc
         self.sexo = sexo
-        pass
+
 
     __mapper_args__ = {
         "polymorphic_identity": "cliente",
@@ -114,9 +114,9 @@ class ClienteModel(PessoaModel):
         self.sexo = obj.sexo
         self.dataNasc = obj.dataNasc
         self.save()
-        pass
 
-    pass
+
+
 
 class UsuarioModel(PessoaModel):
 
@@ -133,7 +133,7 @@ class UsuarioModel(PessoaModel):
         PessoaModel.__init__(self, codigo, nome, email, senha)
         self.cpf = cpf
         self.rg = rg
-        pass
+
 
     __mapper_args__ = {
         "polymorphic_identity": "usuario",
@@ -161,7 +161,7 @@ class UsuarioModel(PessoaModel):
         self.cpf = obj.cpf
         self.rg = obj.rg
         self.save()
-        pass
 
-    pass
+
+
 

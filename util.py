@@ -12,5 +12,5 @@ def raise_error(msg_sys, msg_error, status_error):
         'msg_sys' :  msg_sys,
         'status_error' :  status_error
     }
-    pass
+
 

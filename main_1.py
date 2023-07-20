@@ -15,7 +15,7 @@ produto = ProdutoModel()
 produto.nome = "Fogão"
 produto.preco = 2000.0
 
-categoria = CategoriaModel.find(1)
+categoria = CategoriaModel.find(4)
 
 produto.categoria = categoria
 
@@ -23,8 +23,16 @@ produto.save()
 
 
 ProdutoModel().query.all()
-
+EstoqueModel().query.all()
 estoque = EstoqueModel()
+
+estoque.quantidade = 15
+estoque.produto = ProdutoModel.find(54)
+estoque.save()
+
+estoque.query.all()
+produto.query.all()
+
 estoque.quantidade = 10
-estoque.produto = ProdutoModel.find(1)
+estoque.produto = ProdutoModel.find(4)
 estoque.save()
