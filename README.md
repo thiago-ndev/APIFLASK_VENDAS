@@ -1,6 +1,37 @@
 # APIFLASK_VENDAS
+A APIFLASK_VENDAS é um projeto que demonstra a criação de uma API RESTfull para controle de produtos, cadastro de clientes e usuarios no sistema.
+
+## Documentação da API 
+    https://documenter.getpostman.com/view/25608627/2s946iaqNW
 
 StartFragment
+## Instalação 
+- Python 3.6+
+- Flask 2.0.3
+install using pip:
+
+
+1. Clone o repositório para o seu ambiente local:
+     https://github.com/thiago-ndev/APIFLASK_VENDAS.git
+2. Acesse o diretório do projeto: 
+3. Crie um ambiente Virtual para o projeto(venv)
+
+4. baixe as bibliotecas necessarias para rodar o projeto que estão no arquivo requirements.txt; 
+    pip install -r requirements.txt
+
+5. execute o comando para rodar o projeto no terminal;
+    flask run
+
+
+
+## Tecnologias utilizadas 
+
+- Flask - Framework python para desenvolvimento de Aplicações.
+- Flask-RESTful - framework para criação dw APIs RESTful.
+- SQLAlchemy - mapeamento objeto-relacional SQL 
+- MySQL - banco de dados para armazenamento
+- POSTMAN - Para teste e documentação da API
+
 
 ## Endpoint
 
