@@ -40,22 +40,18 @@ O endpoint de conexão com a API REST JSON
 
 Produtos: 
 https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/produtos 
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/produtos/codigo
 
 categorias:
 https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/categorias 
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/categorias/codigo
 
 Estoque: 
 https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/estoque 
 
 Pessoas: 
 https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/pessoas
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/pessoas/codigo
 
 perfis: 
 https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/perfis
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/perfis/34
 
 
 ## Recursos disponíveis
