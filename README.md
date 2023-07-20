@@ -4,7 +4,6 @@ A APIFLASK_VENDAS é um projeto que demonstra a criação de uma API RESTfull pa
 ## Documentação da API 
     https://documenter.getpostman.com/view/25608627/2s946iaqNW
 
-StartFragment
 ## Instalação 
 - Python 3.6+
 - Flask 2.0.3
@@ -27,19 +26,37 @@ install using pip:
 ## Tecnologias utilizadas 
 
 - Flask - Framework python para desenvolvimento de Aplicações.
-- Flask-RESTful - framework para criação dw APIs RESTful.
+- Flask-RESTful - framework para criação da APIs RESTful.
 - SQLAlchemy - mapeamento objeto-relacional SQL 
 - MySQL - banco de dados para armazenamento
 - POSTMAN - Para teste e documentação da API
 
 
-## Endpoint
+## Endpoints
 
 O endpoint de conexão com a API REST JSON
 
 é: [https://apiflaskvendas-0ebff1c9ea31.herokuapp.com]()
 
-StartFragment
+Produtos: 
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/produtos 
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/produtos/codigo
+
+categorias:
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/categorias 
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/categorias/codigo
+
+Estoque: 
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/estoque 
+
+Pessoas: 
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/pessoas
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/pessoas/codigo
+
+perfis: 
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/perfis
+https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/perfis/34
+
 
 ## Recursos disponíveis
 
