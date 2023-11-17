@@ -9,6 +9,8 @@ class PessoaModel(banco.Model):
     senha = banco.Column(banco.String(255), nullable=False)
     type = banco.Column(banco.String(50))
 
+    # relacionamentos
+
     perfis = banco.relationship(PerfilModel, secondary="pessoas_perfis", back_populates="pessoas")
 
     __mapper_args__={
