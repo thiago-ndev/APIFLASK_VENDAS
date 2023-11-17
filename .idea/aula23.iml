@@ -6,7 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/aula" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (APIFLASK_VENDAS)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="ee94a8d4-e646-4c5f-a6a0-b66d5d2c05e3" />
   </component>
 </module>

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_restful import Resource, Api
 import gunicorn
 import blacklist
@@ -21,7 +21,7 @@ from flask import jsonify
 from config_json import *
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://b9bc569a3e06eb:5f601623@us-cdbr-''east-06.cleardb.net/heroku_e90ccb38ab628f6'
 app.config['JSON_AS_ASCII'] = False  # para o json retornar caracteres especiais
 app.config['SQLALCHEMY_DATABASE_URI']= DATABASE_URL
@@ -41,8 +41,7 @@ app.debug = True
 banco.init_app(app)
 @app.route('/')
 def index():
-    return '<a href="https://documenter.getpostman.com/view/25608627/2s946iaqNW">Documentação</a> <br> <br>' \
-           '<a href="https://github.com/thiago-ndev/APIFLASK_VENDAS">Repository</a>'
+    return render_template('index.html')
 
 @jwt.token_in_blocklist_loader
 def verificar_blacklist(jwt_header, jwt_payload: dict):
