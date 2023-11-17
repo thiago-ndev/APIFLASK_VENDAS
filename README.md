@@ -36,7 +36,7 @@ install using pip:
 
 O endpoint de conexão com a API REST JSON
 
-é: [https://apiflaskvendas.up.railway.app/]()
+é: [https://apiflaskvendas.up.railway.app/](https://apiflaskvendas.up.railway.app/)
 
 Produtos: 
 https://apiflaskvendas.up.railway.app//produtos 
