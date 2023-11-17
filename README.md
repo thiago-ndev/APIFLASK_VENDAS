@@ -36,22 +36,22 @@ install using pip:
 
 O endpoint de conexão com a API REST JSON
 
-é: [https://apiflaskvendas-0ebff1c9ea31.herokuapp.com]()
+é: [https://apiflaskvendas.up.railway.app/]()
 
 Produtos: 
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/produtos 
+https://apiflaskvendas.up.railway.app//produtos 
 
 categorias:
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/categorias 
+https://apiflaskvendas.up.railway.app//categorias 
 
 Estoque: 
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/estoque 
+https://apiflaskvendas.up.railway.app//estoque 
 
 Pessoas: 
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/pessoas
+https://apiflaskvendas.up.railway.app//pessoas
 
 perfis: 
-https://apiflaskvendas-0ebff1c9ea31.herokuapp.com/perfis
+https://apiflaskvendas.up.railway.app//perfis
 
 
 ## Recursos disponíveis
