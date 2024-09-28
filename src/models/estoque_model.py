@@ -52,5 +52,3 @@ class EstoqueModel(banco.Model):
         if obj:
             return obj
         return None
-
-

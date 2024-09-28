@@ -1,10 +1,5 @@
-from datetime import datetime
-
 import pytest
-from src.app import app
-from src.infra.sql_alchemy import banco
-from src.models.pessoa_model import PessoaModel, UsuarioModel, ClienteModel
-from src.resources.pessoa_resource import PessoasResource
+from src.models.pessoa_model import PessoaModel
 
 @pytest.fixture
 def client():

@@ -59,11 +59,3 @@ class PerfilModel(banco.Model):
         if obj:
             return obj
         return None
-
-
-
-
-
-
-
-

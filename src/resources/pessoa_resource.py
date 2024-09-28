@@ -164,4 +164,3 @@ class PessoaPerfisResource(Resource):
         except Exception as ex:
             error = raise_error(ex.args, 'error ao criar perfil', 410)
             return {'error': error}, 500
-

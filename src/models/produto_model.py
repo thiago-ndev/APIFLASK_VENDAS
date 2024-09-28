@@ -68,6 +68,3 @@ class ProdutoModel(banco.Model):
         if obj:
             return obj
         return None
-
-
-

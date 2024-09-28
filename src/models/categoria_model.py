@@ -60,6 +60,3 @@ class CategoriaModel(banco.Model):
         if obj:
             return obj
         return None
-
-
-

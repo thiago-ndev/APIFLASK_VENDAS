@@ -163,7 +163,3 @@ class UsuarioModel(PessoaModel):
         self.cpf = obj.cpf
         self.rg = obj.rg
         self.save()
-
-
-
-

@@ -1,10 +1,10 @@
 # APIFLASK_VENDAS
 A APIFLASK_VENDAS é um projeto que demonstra a criação de uma API RESTfull para controle de produtos, cadastro de clientes e usuarios no sistema.
 
-## Documentação da API 
+## Documentação da API
     https://documenter.getpostman.com/view/25608627/2s946iaqNW
 
-## Instalação 
+## Instalação
 - Python 3.6+
 - Flask 2.0.3
 install using pip:
@@ -12,10 +12,10 @@ install using pip:
 
 1. Clone o repositório para o seu ambiente local:
      https://github.com/thiago-ndev/APIFLASK_VENDAS.git
-2. Acesse o diretório do projeto: 
+2. Acesse o diretório do projeto:
 3. Crie um ambiente Virtual para o projeto(venv)
 
-4. baixe as bibliotecas necessarias para rodar o projeto que estão no arquivo requirements.txt; 
+4. baixe as bibliotecas necessarias para rodar o projeto que estão no arquivo requirements.txt;
     pip install -r requirements.txt
 
 5. execute o comando para rodar o projeto no terminal;
@@ -23,11 +23,11 @@ install using pip:
 
 
 
-## Tecnologias utilizadas 
+## Tecnologias utilizadas
 
 - Flask - Framework python para desenvolvimento de Aplicações.
 - Flask-RESTful - framework para criação da APIs RESTful.
-- SQLAlchemy - mapeamento objeto-relacional SQL 
+- SQLAlchemy - mapeamento objeto-relacional SQL
 - MySQL - banco de dados para armazenamento
 - POSTMAN - Para teste e documentação da API
 
@@ -38,19 +38,19 @@ O endpoint de conexão com a API REST JSON
 
 é: [https://apiflaskvendas.up.railway.app/](https://apiflaskvendas.up.railway.app/)
 
-Produtos: 
-https://apiflaskvendas.up.railway.app//produtos 
+Produtos:
+https://apiflaskvendas.up.railway.app//produtos
 
 categorias:
-https://apiflaskvendas.up.railway.app//categorias 
+https://apiflaskvendas.up.railway.app//categorias
 
-Estoque: 
-https://apiflaskvendas.up.railway.app//estoque 
+Estoque:
+https://apiflaskvendas.up.railway.app//estoque
 
-Pessoas: 
+Pessoas:
 https://apiflaskvendas.up.railway.app//pessoas
 
-perfis: 
+perfis:
 https://apiflaskvendas.up.railway.app//perfis
 
 
@@ -62,7 +62,7 @@ Atualmente existem os seguintes recursos abaixo que você pode manipular atravé
 - Perfis (customers)
 - Produtos (product)
 - Categorias (category)
-    
+
 
 StartFragment
 

@@ -1,6 +1,5 @@
 import pytest
 from src.models.pessoa_model import PessoaModel
-from src.infra.sql_alchemy import banco
 
 @pytest.fixture
 def pessoa():
