@@ -1,4 +1,4 @@
-from sql_alchemy import banco
+from src.infra.sql_alchemy import banco
 class CategoriaModel(banco.Model):
     __tablename__ = 'categoria'
     codigo = banco.Column(banco.Integer(), primary_key=True)
@@ -60,6 +60,3 @@ class CategoriaModel(banco.Model):
         if obj:
             return obj
         return None
-
-
-

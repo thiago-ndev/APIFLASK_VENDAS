@@ -1,7 +1,8 @@
 from flask_restful import Resource, reqparse
 from flask_jwt_extended import jwt_required
-from models.pessoa_model import *
-from util import *
+from src.util import *
+from src.models.pessoa_model import PessoaModel, UsuarioModel, ClienteModel
+from src.models.pessoa_model import PerfilModel
 
 def get_arguments():
     argumentos = reqparse.RequestParser(bundle_errors=True)
@@ -163,4 +164,3 @@ class PessoaPerfisResource(Resource):
         except Exception as ex:
             error = raise_error(ex.args, 'error ao criar perfil', 410)
             return {'error': error}, 500
-

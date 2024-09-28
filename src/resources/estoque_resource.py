@@ -1,8 +1,8 @@
-from models.estoque_model import EstoqueModel
-from models.produto_model import ProdutoModel
+from src.models.estoque_model import EstoqueModel
+from src.models.produto_model import ProdutoModel
 from flask_restful import Resource, reqparse
 from flask_jwt_extended import jwt_required
-from util import *
+from src.util import *
 
 def get_argumentos():
 

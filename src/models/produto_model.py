@@ -1,6 +1,6 @@
-from sql_alchemy import banco
-from .estoque_model import EstoqueModel
-from .categoria_model import CategoriaModel
+from src.infra.sql_alchemy import banco
+from src.models.estoque_model import EstoqueModel
+from src.models.categoria_model import CategoriaModel
 
 class ProdutoModel(banco.Model):
     __tablename__ = 'produto'
@@ -68,6 +68,3 @@ class ProdutoModel(banco.Model):
         if obj:
             return obj
         return None
-
-
-

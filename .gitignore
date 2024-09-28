@@ -2,3 +2,6 @@
 .idea
 .idea/workspace.xml
 __pycache__/
+.pytest_cache
+settings.toml
+.env

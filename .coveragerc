@@ -1,0 +1,34 @@
+[run]
+# Defina o diretório onde o coverage deve procurar pelos arquivos de código
+source = src
+
+branch = True
+
+[report]
+# Exclui do relatório arquivos que não são importantes para a cobertura de testes
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if self\.debug
+    if __name__ == .__main__.:
+    raise NotImplementedError
+
+# Mostra as porcentagens de cobertura no relatório final
+show_missing = True
+precision = 2
+
+# Omitir a lista de arquivos não testados, mas incluir a porcentagem no final
+skip_covered = True
+
+[html]
+# Defina onde será salvo o relatório HTML da cobertura
+directory = htmlcov
+
+[xml]
+# Defina o local para salvar o arquivo XML da cobertura
+output = coverage.xml
+
+[paths]
+# Ajusta os caminhos se necessário, útil para ambientes como Docker
+source =
+    src

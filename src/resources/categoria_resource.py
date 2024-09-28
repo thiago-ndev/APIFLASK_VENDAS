@@ -1,6 +1,6 @@
 from flask_restful import Resource, reqparse
-from models.categoria_model import CategoriaModel
-from util import raise_error
+from src.models.categoria_model import  CategoriaModel
+from src.util import raise_error
 
 def get_argumentos():
     argumentos = reqparse.RequestParser(bundle_errors=True)

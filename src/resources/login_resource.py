@@ -1,10 +1,10 @@
 from flask_restful import Resource, reqparse
-from util import *
-from models.pessoa_model import *
+from src.util import *
 from hmac import compare_digest
 from flask_jwt_extended import create_access_token, get_jwt, jwt_required
-from blacklist import *
+from src.blacklist import *
 from flask import make_response, jsonify
+from src.models.pessoa_model import PessoaModel
 
 class LoginResource(Resource):
 

@@ -1,4 +1,4 @@
-from sql_alchemy import banco
+from src.infra.sql_alchemy import banco
 
 class EstoqueModel(banco.Model):
     __tablename__ = 'estoque'
@@ -52,5 +52,3 @@ class EstoqueModel(banco.Model):
         if obj:
             return obj
         return None
-
-

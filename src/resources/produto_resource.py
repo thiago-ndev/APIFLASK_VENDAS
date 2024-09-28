@@ -1,8 +1,8 @@
 from flask_restful import Resource, reqparse
-from models.categoria_model import CategoriaModel
-from models.produto_model import ProdutoModel
+from src.models.categoria_model import CategoriaModel
+from src.models.produto_model import ProdutoModel
 from flask_jwt_extended import jwt_required
-from util import raise_error
+from src.util import raise_error
 
 def get_argumentos(chek=True):
     argumentos = reqparse.RequestParser(bundle_errors=True)
@@ -69,7 +69,7 @@ class ProdutoResource(Resource):
 
         except Exception as ex:
             error = raise_error(ex.args,"Error ao buscar produto", 410), 500
-            return {'error', error}, 500
+            return {'error':error}, 500
 
     @jwt_required()
     def delete(self,codigo):

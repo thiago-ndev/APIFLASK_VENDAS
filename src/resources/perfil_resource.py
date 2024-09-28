@@ -1,10 +1,7 @@
-from flask_jwt_extended import create_access_token, jwt_required
+from flask_jwt_extended import jwt_required
 from flask_restful import Resource,reqparse
-from models.perfil_model import PerfilModel
-from werkzeug.security import safe_str_cmp
-from flask import make_response, jsonify
-from blacklist import *
-from util import *
+from src.models.perfil_model import PerfilModel
+from src.util import *
 
 def get_argumentos(self):
     argumentos = reqparse.RequestParser(bundle_errors=True)

@@ -1,5 +1,5 @@
-from sql_alchemy import banco
-from .perfil_model import PerfilModel
+from src.infra.sql_alchemy import banco
+from src.models.perfil_model import PerfilModel
 
 class PessoaModel(banco.Model):
     __tablename__='pessoa'
@@ -163,7 +163,3 @@ class UsuarioModel(PessoaModel):
         self.cpf = obj.cpf
         self.rg = obj.rg
         self.save()
-
-
-
-

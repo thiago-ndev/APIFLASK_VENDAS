@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("/static/tubulacao.jpg");
+    background-image: url("/src/staticatic/tubulacao.jpg");
 }
 
 h1 {

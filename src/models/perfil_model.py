@@ -1,4 +1,4 @@
-from sql_alchemy import banco
+from src.infra.sql_alchemy import banco
 
 association_table = banco.Table(
     "pessoas_perfis", banco.metadata,
@@ -59,11 +59,3 @@ class PerfilModel(banco.Model):
         if obj:
             return obj
         return None
-
-
-
-
-
-
-
-
