@@ -10,11 +10,13 @@ repos:
   - repo: local
     hooks:
       - id: pytest
-        name: pytest
+        name: pytest (no unstaged stashing)
         entry: pytest
         language: system
         pass_filenames: false
         always_run: true
+        stages:
+          - commit
 
       - id: requirements
         name: requirements
